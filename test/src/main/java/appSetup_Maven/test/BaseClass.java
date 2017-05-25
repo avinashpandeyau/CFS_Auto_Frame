@@ -7,11 +7,10 @@ import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-public class BaseClass 
-{
+public class BaseClass {
 	
 
-	private WebDriver driver;
+  protected WebDriver driver =null;
 	 
 	
 	public void setupApplication()
@@ -36,6 +35,13 @@ public class BaseClass
 		
 	}
 	
+	public void getUrl() {
+		driver.get("http://preprod.cloudfilesync.com");
+	}
+	
+	public void login() {
+		driver.get("http://preprod.cloudfilesync.com");
+	}
 	
 	
 }
